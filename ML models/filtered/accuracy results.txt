@@ -1,0 +1,59 @@
+Model 1:
+l1 256 l2 32= accuracy: 0.8286 - val_accuracy: 0.6042 - lr: 1.0000e-07
+l1 512 l2 32= accuracy: 0.8803- val_accuracy: 0.6042 - lr: 1.0000e-06
+l1 256 l2 128=accuracy: 0.9202 - val_accuracy: 0.6667 - lr: 1.0000e-07
+l1 256 l2 256=accuracy: 0.9437 - val_accuracy: 0.7083 - lr: 1.0000e-07 ++
+l1 256 l2 64= accuracy: 0.8779 - val_accuracy: 0.6250 - lr: 1.0000e-08
+l1 512 l2 128=accuracy: 0.9531 - val_accuracy: 0.6042 - lr: 1.0000e-06 
+l1 512 l2 256=accuracy: 0.9108 - val_accuracy: 0.6667 - lr: 1.0000e-21
+Hussein model=accuracy: 0.7324 - val_accuracy: 0.6042 - lr: 1.0000e-17
+
+Model 2:
+L1 512 L2 256= accuracy: 0.8651 - val_accuracy: 0.9176 - lr: 1.0000e-16
+L1 256 L2 64 = accuracy: 0.8886 - val_accuracy: 0.9765 - lr: 1.0000e-15 ++
+L1 256 L2 256= accuracy: 0.8592 - val_accuracy: 0.8824 - lr: 1.0000e-16
+L1 256 L2 64 L3 32= accuracy: 0.8152 - val_accuracy: 0.8471 - lr: 1.0000e-16
+
+Model 3:
+Fx Fy Fz Mu Tan = accuracy: 0.9460  - val_accuracy: 0.8542 
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient'= accuracy: 0.8638 - val_accuracy: 0.7500 
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy','Fz' = accuracy: 0.9859 -  val_accuracy: 0.8750 
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Tangential Force' =accuracy: 0.8920 - val_accuracy: 0.7708 
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Tangential Force', 'Fz'=accuracy: 0.8920  - val_accuracy: 0.7917
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy', 'Tangential Force'= accuracy: 0.9930 - val_accuracy: 0.8750 ++
+'Var_Fx', 'Var_Fy', 'Frictional Coefficient', 'Fx','Fy', 'Tangential Force'= accuracy: 0.9695 - val_accuracy: 0.8333 
+'Var_Fx', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fz', 'Tangential Force'= accuracy: 0.9648 - val_accuracy: 0.8333 
+'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fy','Fz', 'Tangential Force'=accuracy: 0.9061 - val_accuracy: 0.8125 
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy','Fz', 'Tangential Force' = accuracy: 0.9742 - val_accuracy: 0.8958 
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient' ,'Fz', 'Tangential Force' = accuracy: 0.8944 - val_accuracy: 0.7708 
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy', 'Fz', 'Tangential Force'=accuracy: 0.9836- val_accuracy: 0.9167 
+
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy','Fz', 'Tangential Force' MSE mode accuracy: 0.9765 -- val_accuracy: 0.8958 
+
+Model 4:
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy','Fz', 'Tangential Force' custom loss = accuracy: 0.9812 val_accuracy: 0.8958
+Model 5:
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy','Fz', 'Tangential Force' =accuracy: 0.9150 val_accuracy: 1.0000
+
+Model 6:
+PART 1:
+stdscalar: formula= loss: 0.7544 , mse+formula= 0.8779, mse only= 2.7987e-04
+minmaxscalar: formula = loss: 0.0230, mse+formula = 0.0632 mse only=1.4756e-04
+PART 2:
+L1,L2 =256 :'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy', 'Tangential Force' accuracy: 0.9812 val_accuracy: 0.9167
+L1,L2 =256 :'Var_Fx', 'Var_Fy', 'Var_Fz', 'Pred Frictional Coefficient', 'Fx','Fy', 'Tangential Force' accuracy: 0.9859 val_accuracy: 0.9167
+L1,L2 =256 :'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Pred Mu', 'Fx','Fy', 'Tangential Force' accuracy: 0.9695 val_accuracy: 0.8542
+
+Model 7:
+'Var_Fx', 'Var_Fy', 'Var_Fz', 'Frictional Coefficient', 'Fx','Fy','Fz', 'Tangential Force' =accuracy: 0.9991 val_accuracy: 0.9984
+Model 8: accuracy: 0.9980 - val_accuracy: 0.9991 Total Training Time: 17.28 seconds
+
+
+
+
+
+
+
+
+
+
