@@ -11,7 +11,7 @@ This project investigates diverse material classification techniques using force
 
 # Datasets
 Extract contents of Datasets.rar (collected using ATI FT34898 F/T Sensor) in the root folder. 
-<br>For example: 2023-05-16_16-36-37_FT34898.csv file will be in following directory .\Datasets\log\Cardboard\1 newton\15 velo
+<br>*For example: 2023-05-16_16-36-37_FT34898.csv file will be in following directory .\Datasets\log\Cardboard\1 newton\15 velo*
 
 **Note:** preprocessed dataset folder has not been included due to large size. It can be generated in local drive during Step 4 of running scripts in [Data PreProcessing.ipynb](https://github.com/nibrassajjad/surface-material-detection-using-haptic-force-data/blob/main/Data%20PreProcessing.ipynb).
 
