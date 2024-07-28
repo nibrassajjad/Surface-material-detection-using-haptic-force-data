@@ -9,13 +9,11 @@ This project investigates diverse material classification techniques using force
   <img src="https://github.com/user-attachments/assets/ffcb5c66-3747-4ded-af6a-cc87c903647c" alt="Image 2" width="400" />
 </p>
 
-
-
 # Datasets
 Extract contents of Datasets.rar (collected using ATI FT34898 F/T Sensor) in the root folder. 
 <br>For example: 2023-05-16_16-36-37_FT34898.csv file will be in following directory .\Datasets\log\Cardboard\1 newton\15 velo
 
-**Note:** preprocessed dataset folder has not been included due to large size.
+**Note:** preprocessed dataset folder has not been included due to large size. It can be generated in local drive during Step 4 of running scripts in [Data PreProcessing.ipynb](https://github.com/nibrassajjad/surface-material-detection-using-haptic-force-data/blob/main/Data%20PreProcessing.ipynb).
 
 # Quick Guide
 
@@ -30,5 +28,34 @@ Extract contents of Datasets.rar (collected using ATI FT34898 F/T Sensor) in the
 ### Running neural network models:
 
 Different kind of neural network model variations have been created for performance analysis. The notebook can be found at [./ML models/filtered/ML model.ipynb](https://github.com/nibrassajjad/surface-material-detection-using-haptic-force-data/blob/main/ML%20models/filtered/ML%20model.ipynb)
+
+# Project Approach
+
+## Methodology
+
+![image](https://github.com/user-attachments/assets/794ff211-7074-4d8c-8607-a35502ded9c9)
+
+## 1. Data Collection and Preprocessing/Wrangling
+
+UR10e robot arm with ATI FT34898 F/T Sensor attachment was used to scratch vertically on 10 different materials at various programmed speed and normal force. The haptic action of scratching was performed back and forth along x-axis for 50 mm. Force data at the metal tip was recorded in X, Y, Z-axis during the haptic exploration. 
+
+**Note:** A quick manual on how to use ATI F/T Force Sensor can be found [here](https://github.com/nibrassajjad/surface-material-detection-using-haptic-force-data/blob/main/FT_sensor_manual.pdf)
+
+![image](https://github.com/user-attachments/assets/e98e14bc-8b0e-4448-a0c0-5c75d3b03998)
+
+* **Raw data:** Total number of raw data points recorded: 423550 from 600 datasets (60 for each material)
+* **Feature Engineering:** Frictional coefficient and Tangential force for every data point is computed
+* **Data Filtering:** Outlier removal by retaining data between 1st and 3rd quartile of frictional coefficient only
+* **Filtered Data** Total number of data points after filtering: 289485 (~68% of raw dataset)
+* **Data Enrichment:** Variance, correlation coefficients, variance per sample, correlation per sample for forces in x,y,z axis is also computed for every filtered dataset
+* **Statistical Summary:** A statistical summary dataset is created which have average values of all the entries in every dataset. This statistical summary dataset will be used mainly for our [machine learning models 1-6](https://github.com/nibrassajjad/surface-material-detection-using-haptic-force-data/blob/main/ML%20models/filtered/ML%20model.ipynb).
+
+![image](https://github.com/user-attachments/assets/c0d24e08-46d7-464c-a4c6-8917cbd4dcf3)
+
+
+
+
+
+
 
 
