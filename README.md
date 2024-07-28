@@ -52,6 +52,14 @@ UR10e robot arm with ATI FT34898 F/T Sensor attachment was used to scratch verti
 
 ![image](https://github.com/user-attachments/assets/c0d24e08-46d7-464c-a4c6-8917cbd4dcf3)
 
+## 2. Training neural network models
+
+* Eight different neural network models have been trained for evaluation. The code for these models can be found [here](https://github.com/nibrassajjad/surface-material-detection-using-haptic-force-data/blob/main/ML%20models/filtered/ML%20model.ipynb)
+* Model 1,2,3,4,5,6 uses the statistical summary set as the network's input.
+* The dataset is split into a training set and a test set with an 80%:20% ratio.
+* Since the statistical summary dataset contains only 600 entries, the batch size for training the algorithm is set to 1 (for Model 1 through 6).
+* The training set is further divided into a training set and a validation set with a 90%:10% split. A validation set is necessary to ensure that the model does not overfit.
+
 
 
 
