@@ -59,6 +59,28 @@ UR10e robot arm with ATI FT34898 F/T Sensor attachment was used to scratch verti
 * The dataset is split into a training set and a test set with an 80%:20% ratio.
 * Since the statistical summary dataset contains only 600 entries, the batch size for training the algorithm is set to 1 (for Model 1 through 6).
 * The training set is further divided into a training set and a validation set with a 90%:10% split. A validation set is necessary to ensure that the model does not overfit.
+* **Correlation matrix analysis:** To understand how the features correlate to each other, correlation matrix files for each material are computed using the script in [Correlation file generator.ipynb](https://github.com/nibrassajjad/surface-material-detection-using-haptic-force-data/blob/main/Correlation%20file%20generator.ipynb). Features that produced correlation values for more than 0.7 or less than -0.7 has been used as input features for models 6,7,8.
+
+![image](https://github.com/user-attachments/assets/e57a1d72-3e9e-43b8-b50e-16d684b19bb3)
+
+* Instead of the statistical summary dataset, models 7 and 8 uses **all the filtered datasets** with their entirety for training. Batch size for these models have been tuned up to 512 to reduce training time.
+* Model 8 uses a concatanated neural network architecture where 10 neural networks (each neural network using input features that has high correlation score for each of the 10 materials) are fed to one neural network to produce classification output.
+
+## 3. Results
+<p>
+  <img src="https://github.com/user-attachments/assets/5376a2c4-053d-470c-a528-9048a2dbf749" alt="Image 1" width="700" />
+</p>
+
+# Conclusion and future works
+
+* This project has explored various neural network architectures to classify between materials through haptic exploration
+* Future works can investigate into finding further physics-informed features specific to different materials
+
+# Author notes
+If you liked this project, please leave a star! I am currently looking for job opportunities, preferably in Germany. Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/nibras-sajjad/) if you have any leads or would like to connect.
+
+
+
 
 
 
